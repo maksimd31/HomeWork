@@ -19,7 +19,7 @@ import java.util.List;
 public class BaseHuman { //Родительский класс
     String name, sex;
     Integer yers;
-    String Father;
+    BaseHuman Father;
     List<BaseHuman> cildren;
 
 
@@ -30,7 +30,7 @@ public class BaseHuman { //Родительский класс
 //    protected static String Father;
 
 
-    public BaseHuman(String name, int yers, String sex, String Father) { //конструктор класса имя и возраст
+    public BaseHuman(String name, int yers, String sex, BaseHuman Father) { //конструктор класса имя и возраст
         this.name = name;
         this.yers = yers;
         this.sex = sex;

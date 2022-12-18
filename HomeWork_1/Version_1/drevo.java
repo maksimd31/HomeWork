@@ -24,20 +24,20 @@ public class drevo {
 
 
         List<BaseHuman> Humanlist = new ArrayList<>(); //создаем лист и записываем всех туда //взрослые
-        Humanlist.add(new BaseHuman("Илья", 40, "мужской", "Олег"));
+        Humanlist.add(new BaseHuman("Илья", 40, "мужской", BaseHuman);
         Humanlist.add(new BaseHuman("Ольга", 42, "женский", "Иван"));
 //        Humanlist.addAll((Collection<? extends BaseHuman>) new BaseHuman(VV, V1,V2,V3));
 
 
-        List<cilderen> cilderenlist = new ArrayList<>();
-        cilderenlist.add(new cilderen("Семен", 10, "мужской", "Илья"));
-        cilderenlist.add(new cilderen("Ксения", 12, "женский", "Илья"));
-
-
-        List<brozers> broo = new ArrayList<>();
-        broo.add(new brozers("Андрей", 43, "мужской", "Илья"));
-        broo.add(new brozers("Света", 33, "женский", "Ольга"));
-
+//        List<cilderen> cilderenlist = new ArrayList<>();
+//        cilderenlist.add(new cilderen("Семен", 10, "мужской", "Илья"));
+//        cilderenlist.add(new cilderen("Ксения", 12, "женский", "Илья"));
+//
+//
+//        List<brozers> broo = new ArrayList<>();
+//        broo.add(new brozers("Андрей", 43, "мужской", "Илья"));
+//        broo.add(new brozers("Света", 33, "женский", "Ольга"));
+//
 
 
     }
