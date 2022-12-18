@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Human human1 = new Human("Андрей",Father);
+
+
+
+
 
 
 //        Human human1 = new Human("Андрей", 40, "Мужской");
@@ -26,7 +29,7 @@ public class Main {
 
 
     }
-//        Human human1 = new Human("Андрей", 40, "Мужской", Human);
+//        Human addHuman = new Human("Андрей", 40, "Мужской", Human);
 //
 //        Cildren Cildern1 = new Cildren("Иван", 10, "Мужской", "Андрей");
 //
