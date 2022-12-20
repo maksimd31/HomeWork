@@ -22,7 +22,7 @@ public class Main {
                 metod.getname1(Baza);
                 break;
             case 2:
-                Drevo.addHuman(Baza);
+                Drevo.addHuman(Baza); // не работает
             case 3:
                 System.out.println(Arrays.toString(Baza));
         }
