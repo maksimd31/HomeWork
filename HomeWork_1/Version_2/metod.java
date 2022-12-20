@@ -7,8 +7,8 @@ public class metod {
         while (true) {
             Scanner iScanner = new Scanner(System.in);
             String vibor = iScanner.nextLine();
-            if (Objects.equals(vibor, "Андрей")) {
-                System.out.print(Human.getNAME(Baza, "Андрей"));
+            if (Objects.equals(vibor, "Иван")) {
+                System.out.print(Human.getNAMEe(Baza, "Иван"));
                 break;
             } else {
                 System.out.print("Нет такого попробуй еще");

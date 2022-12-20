@@ -13,6 +13,9 @@ public class Human {
 
 public Human(String name){
     this.name = name;
+    this.children = new ArrayList<>();
+//    Father.getChildren().add(this);
+//    mother.getChildren().add(this);
 
 
 }
@@ -25,10 +28,11 @@ public Human(String name){
         this.mother = mother;
 
         this.children = new ArrayList<>();
-        Father.getChildren().add(Father);
-        mother.getChildren().add(mother);
+        Father.getChildren().add(this);
+        mother.getChildren().add(this);
 
     }
+
 //    public Human(String name, int yers, String sex,Human Father,Human mother){
 //        this.name = name;
 //        this.yers = yers;
@@ -95,19 +99,19 @@ public Human(String name){
 
     @Override
     public String toString() {
-        return "Имя: " + getName() + " Возраст: " + getYers() + " Пол : " + getSex() + "Папа : " + getFather() + "Мама "+
-                getmother();
+        return "Имя: " + getName() + " Возраст: " + getYers() + " Пол : " + getSex() + "Папа : " + this.Father + "Мама "+
+                this.mother;
     }
 
-    public static StringBuilder getNAME(Human[] Baza, String name) {
+    public static StringBuilder getNAMEe(Human[] Baza, String name) {
         StringBuilder result = new StringBuilder();
         for (Human c : Baza) {
             if (Objects.equals(c.name, name)) {
                 result.append("Имя: ").append(c.name);
                 result.append(" Возраст : ").append(c.yers);
                 result.append(" пол : ").append(c.sex);
-                result.append(" Папа : ").append(c.Father);
-                result.append(" Мама : ").append(c.mother);
+                result.append(" Папа : ").append(c.Father.getName());
+                result.append(" Мама : ").append(c.mother.getName());
                 result.append("\n");
             }
         }

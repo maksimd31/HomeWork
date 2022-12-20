@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,16 +12,20 @@ public class Main {
 
         Human[] Baza = {h2,h3,h4};
 
-        System.out.println(Arrays.toString(Baza));
+        System.out.print("Поиск\n 1 - поиск по имени \n2 - Добавление\nВвывести весь список \nВведите данные: ");
 
 
-//        Scanner iScanner = new Scanner(System.in);
-//        int VV = iScanner.nextInt();
-//        switch (VV){
-//            case 1:
-//                metod.getname1(Baza);
-//                break;
-//        }
+        Scanner iScanner = new Scanner(System.in);
+        int VV = iScanner.nextInt();
+        switch (VV){
+            case 1:
+                metod.getname1(Baza);
+                break;
+            case 2:
+                Drevo.addHuman(Baza);
+            case 3:
+                System.out.println(Arrays.toString(Baza));
+        }
 
 
 //        List<Human> humans = new ArrayList<>();
