@@ -8,7 +8,10 @@ public class Drevo {
 
     public static void addHuman(Human[] human) { //добавление
         List<Human[]> humans = new ArrayList<>();
-        humans.addAll(Collections.singleton(human));
+        for (int i = 0; i < humans.size(); i++) {
+            humans.addAll(Collections.singleton(human));
+        }
+
 
 
 //
