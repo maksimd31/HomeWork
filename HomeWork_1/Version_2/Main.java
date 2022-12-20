@@ -12,7 +12,7 @@ public class Main {
 
         Human[] Baza = {h2,h3,h4};
 
-        System.out.print("Поиск\n 1 - поиск по имени \n2 - Добавление\nВвывести весь список \nВведите данные: ");
+        System.out.print("Поиск\n 1 - поиск по имени \n2 - Добавление\n3 - Ввывести весь список \nВведите данные: ");
 
 
         Scanner iScanner = new Scanner(System.in);
