@@ -17,8 +17,6 @@ public class Human {
         this.children = new ArrayList<>();
 //    Father.getChildren().add(this);
 //    mother.getChildren().add(this);
-
-
     }
 
 

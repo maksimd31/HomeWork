@@ -1,11 +1,8 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-//        ArrayList<MyClass> date  = new ArrayList<>();
+//        List<Human> date  = new ArrayList<>(Human.MyClass);
 
         Human h11 = new Human("Миша");
         Human h22 = new Human("Ольга");
