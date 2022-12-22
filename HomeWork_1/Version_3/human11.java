@@ -1,5 +1,5 @@
-public class Child extends Human {
-    public Child(String name, int date, String sex, Human father, Human mother) {
+public class human11 extends Human {
+    public human11(String name, int date, String sex, Human father, Human mother) {
         super(name, date, sex, father, mother);
     }
 //public class Child extends Human {

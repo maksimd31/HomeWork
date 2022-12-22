@@ -12,7 +12,9 @@ public class Human {
     private Human mother;
     private List<Human> children;
 
-    public Human(String name){
+    private Date Date;
+
+    public Human(String name, int i, String human, String s){
         this.name = name;
         this.children = new ArrayList<>();
 //    Father.getChildren().add(this);
@@ -23,10 +25,10 @@ public class Human {
 
 
 
-    public Human(String name, int date, String sex, Human father, Human mother) { //конструктор класса имя и
+    public Human(String name, int Date, String sex, Human father, Human mother) { //конструктор класса имя и
 
         this.name = name;
-        this.years = date;
+        this.years = Date;
         this.sex = sex;
         this.mother = mother;
         this.father = father;
@@ -73,7 +75,8 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Имя: " + getName() + " Возраст: " + getYears() + " Пол : " + getSex();
+        return "Имя: " + getName() + " Возраст: " + getYears() + " Пол : " + getSex() + " Мать : " + this.mother + " " +
+                " Отец : " + this.father;
     }
 
     public static StringBuilder getNAME(Human[] Baza, String name) {
