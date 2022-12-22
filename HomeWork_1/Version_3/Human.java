@@ -1,17 +1,45 @@
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class Human {
     private String name, sex;
     private Integer years;
+    private Human father;
 
-    public Human(String name, int years, String sex) { //конструктор класса имя и возраст, пол
+    private Human mother;
+    private List<Human> children;
+
+    public Human(String name){
         this.name = name;
-        this.years = years;
-        this.sex = sex;
+        this.children = new ArrayList<>();
+//    Father.getChildren().add(this);
+//    mother.getChildren().add(this);
+
+
     }
 
-    public String getName() { 
+
+
+
+
+    public Human(String name, int date, String sex, Human father, Human mother) { //конструктор класса имя и
+
+        this.name = name;
+        this.years = date;
+        this.sex = sex;
+        this.mother = mother;
+        this.father = father;
+
+        this.children = new ArrayList<>();
+        father.getChildren().add(this);
+        mother.getChildren().add(this);
+
+    }
+
+    public String getName() {
         return name;
     }
 
@@ -19,11 +47,13 @@ public class Human {
         return years;
     }
 
-    public String getSex() { 
+    public String getSex() {
         return sex;
 
     }
-
+    public List<Human> getChildren() {
+        return this.children;
+    }
     public void setSex(String sex) {
         this.sex = sex;
     }
@@ -31,7 +61,14 @@ public class Human {
     public void setName(String name) {
         this.name = name;
     }
+    public class MyClass {
 
+        private Date d1;
+        private Date d2;
+        private String s;
+
+    }
+    //    ArrayList<MyClass> date  = new ArrayList<>();
     public void setYears(Integer years) {
         this.years = years;
     }
@@ -55,3 +92,12 @@ public class Human {
     }
 
 }
+/*
+Посмотрел третий вариант. Класс Child убрать. Везде, где он использовался в коде заменить на Human.
+
+Возраст для описания гениалогического древа плохо подходит, лучше дата рождения.
+
+В дереве вынести из методов работу со сканерами.
+Метод должна поступать информация для работы и не важно откуда она придет.
+Работу со сканнером можно вынести в отдельный класс, можно пока оставить в классе Main
+ */
