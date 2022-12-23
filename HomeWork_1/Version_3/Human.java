@@ -1,9 +1,10 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class Human {
+public class Human implements Serializable, interface01 {
     private String name, sex;
     private Integer Date;
     private Human father;
@@ -89,6 +90,13 @@ public class Human {
         this.name = name;
     }
 
+    @Override
+    public void show() {
+        System.out.println("Имя: " + getName() + " Возраст: " + getYears() + " Пол : " + getSex() + " Мать : " + mother + " " +
+                " Отец : " + father);
+    }
+
+
     public class MyClass {
 
         private Date d1;
@@ -104,8 +112,8 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Имя: " + getName() + " Возраст: " + getYears() + " Пол : " + getSex() + " Мать : " + this.mother + " " +
-                " Отец : " + this.father;
+        return "Имя: " + getName() + " Возраст: " + getYears() + " Пол : " + getSex() + " Мать : " + mother + " " +
+                " Отец : " + father;
     }
 
     public static StringBuilder getNAME(Human[] Baza, String name) {
@@ -122,12 +130,3 @@ public class Human {
     }
 
 }
-/*
-Посмотрел третий вариант. Класс Child убрать. Везде, где он использовался в коде заменить на Human.
-
-Возраст для описания гениалогического древа плохо подходит, лучше дата рождения.
-
-В дереве вынести из методов работу со сканерами.
-Метод должна поступать информация для работы и не важно откуда она придет.
-Работу со сканнером можно вынести в отдельный класс, можно пока оставить в классе Main
- */
