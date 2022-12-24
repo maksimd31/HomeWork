@@ -3,20 +3,12 @@ import java.util.*;
 public class Drevo {
     private List<Human> humans;
 
-
-//    public Drevo(List<Human> humans) {
-//        this.humans = humans;
-//    }
-
     public Drevo() {
         this.humans = new ArrayList<>();
 
     }
 
-    //метод добавления человека в дерево
 
-
-    //метод поиска человека
 
 
     //метод вывода всех людей из дерева
