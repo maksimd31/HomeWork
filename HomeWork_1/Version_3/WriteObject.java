@@ -12,7 +12,7 @@ public class WriteObject {
             FileInputStream fis = new FileInputStream("Human.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            Human FF = (Human) ois.readObject(); //возвращает  родителя класса object
+            Human FF = (Human) ois.readObject(); //возвращает родителя класса object
             Human F1 = (Human) ois.readObject();
             System.out.println(FF);
             System.out.println(F1);
