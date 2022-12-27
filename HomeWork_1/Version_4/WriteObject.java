@@ -25,4 +25,5 @@ public class WriteObject {
             throw new RuntimeException(e);
         }
     }
+
 }

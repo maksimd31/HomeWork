@@ -8,19 +8,21 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args ) {
+
         Human FF = new Human("Boby", 3,"men");
         Human F1 = new Human("Alex",2,"men");
-        FF.show(); // вызов из интерфейса
 
-        //Второй метод вызова из interface01
-        interface01 TT = new Human("Bady",33,"man");
-        interface01 T1 = new Id(1);
-        TT.show();
-        T1.show();
-        //+ - Полиморфизм
-        //еще один метод вывода ниже ouputinterface01(interface01 info)
-        ouputinterface01(TT);
-        ouputinterface01(T1);
+//        FF.show(); // вызов из интерфейса
+
+//        //Второй метод вызова из interface01
+//        interface01 TT = new Human("Bady",33,"man");
+//        interface01 T1 = new Id(1);
+//        TT.show();
+//        T1.show();
+//        //+ - Полиморфизм
+//        //еще один метод вывода ниже ouputinterface01(interface01 info)
+//        ouputinterface01(TT);
+//        ouputinterface01(T1);
 
 
 
@@ -38,17 +40,17 @@ public class Main{
 
 
 
-
-
-        Drevo fam = new Drevo();
-        fam.addHuman(new Human("Boby",22 ,"man"),F1, null );
-
-        Drevo  Cill = new Drevo();
-        Cill.addChildren(FF,F1,null);
-
-
-
-
+//
+//
+//        Drevo fam = new Drevo();
+//        fam.addHuman(new Human("Boby",22 ,"man"),F1, null );
+//
+//        Drevo  Cill = new Drevo();
+//        Cill.addChildren(FF,F1,null);
+//
+//
+//
+//
 
 
 /*

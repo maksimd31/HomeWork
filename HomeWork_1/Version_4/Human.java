@@ -1,6 +1,5 @@
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -67,15 +66,7 @@ public class Human implements Serializable, interface01 {
     }
 
 
-    public class MyClass {
 
-        private Date d1;
-        private Date d2;
-        private String s;
-
-    }
-
-    //    ArrayList<MyClass> date  = new ArrayList<>();
     public void setYears(Integer Date) {
         this.Date = Date;
     }

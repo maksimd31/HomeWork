@@ -31,28 +31,14 @@ public class Human implements Serializable, interface01 {
 //    }
 
 
-    public Human(String name, int Date, String sex) { //конструктор класса имя и
-
+    public Human(String name, int Date, String sex) { //Базовый констркутор человека
+        super();
         this.name = name;
         this.Date = Date;
         this.sex = sex;
         this.mother = null;
         this.father = null;
         this.children = new ArrayList<>();
-
-//    public Human(String name, int Date, String sex, Human father, Human mother) { //конструктор класса имя и
-//
-//        this.name = name;
-//        this.Date = Date;
-//        this.sex = sex;
-//        this.mother = mother;
-//        this.father = father;
-//        this.children = new ArrayList<>();
-
-
-//     this.children = new ArrayList<>();
-//        father.getChildren().add(this);
-//        mother.getChildren().add(this);
 
     }
 
