@@ -1,3 +1,5 @@
+package Homework_1_2;
+
 import java.io.InvalidObjectException;
 
 public class Main {

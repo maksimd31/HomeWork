@@ -1,15 +1,25 @@
+package Homework_3;
+
 import java.io.Serializable;
 import java.util.*;
 
-public class Femily_Tree implements Serializable {
-    private List<Designer_Human> humans;
+public class Femily_Tree implements Serializable,Iterable<Designer_Human>{//добавил итеребал к
+    // констркутору человека
+    private final List<Designer_Human> humans;
 
     public Femily_Tree() {
-        this.humans = new ArrayList();
+        humans = new ArrayList();
     }
-    public List<Designer_Human> getHumans() {
-        return this.humans;
+
+
+//    public List<Designer_Human> getHumans() {
+//        return this.humans;
+//    }
+    public List<Designer_Human> gethumans(){
+        return humans;
     }
+
+
     /**
      * Метод добавления родителей
      *
@@ -27,6 +37,7 @@ public class Femily_Tree implements Serializable {
         }
 
     }
+
     /**
      * Метод вывода всех людей из списка
      *
@@ -52,12 +63,13 @@ public class Femily_Tree implements Serializable {
 
     /**
      * Поиск по имени
+     *
      * @param name
      * @return Возвращает поле humans
      */
-    public List<Designer_Human> showName(String name){
-        for (Designer_Human human : humans){
-            if (human.getName()== name){
+    public List<Designer_Human> showName(String name) {
+        for (Designer_Human human : humans) {
+            if (human.getName() == name) {
                 humans.add((Designer_Human) this.humans);
             }
         }
@@ -66,17 +78,27 @@ public class Femily_Tree implements Serializable {
 
     /**
      * Еще вариант метода добавления людей
+     *
      * @param human
      */
-    public void addHuman (Designer_Human human) {
+    public void addHuman(Designer_Human human) {
         this.humans.add(human);
     }
-    public void searchHuman (List <Designer_Human> humans) {
+
+    /**
+     * метод добавления очередной
+     * @param Humman
+     */
+    public void addHumanH(Designer_Human Humman) {
+        humans.add(Humman);
+    }
+
+    public void searchHuman(List<Designer_Human> humans) {
         Scanner iScanner = new Scanner(System.in);
         System.out.println("Введите имя человека для поиска: ");
         String human = iScanner.nextLine();
         for (Designer_Human с : humans) {
-            if(human.equals(с.getName())) {
+            if (human.equals(с.getName())) {
                 System.out.println(с);
                 break;
             } else {
@@ -86,12 +108,14 @@ public class Femily_Tree implements Serializable {
         }
     }
 
-    /**
-     * Метод сортировки
-     * @param list
-     */
-    public void sort(List list){
-        Collections.sort(list);
+
+
+    @Override
+    public Iterator<Designer_Human> iterator() {
+        return new StaddyIterator(humans); //Реализуем функионал
     }
+
+
+
 }
 

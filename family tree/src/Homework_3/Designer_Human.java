@@ -1,3 +1,5 @@
+package Homework_3;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -5,16 +7,21 @@ import java.util.List;
 /**
 Описываем сущность вида human
  */
-public class Designer_Human implements Serializable{
+public class Designer_Human implements Serializable, Comparable<Designer_Human>{
+    public Femily_Tree Designer_Human;
     //создаем поля в классе
     private String name, sex;
-    private int date;
+    private int date,id;
 
     private Designer_Human father; // Объектная переменная
 
     private Designer_Human mother; // Объектная переменная
 
     private List<Designer_Human> children;
+
+    public List<Designer_Human> getHumans() {
+        return humans;
+    }
 
     private List<Designer_Human> humans;
 
@@ -41,7 +48,6 @@ public class Designer_Human implements Serializable{
         this.date = date;
         this.father = father;
         this.mother = mother;
-//        this.humans = humans;
         this.children = new ArrayList<>();
 
     }
@@ -58,7 +64,21 @@ public class Designer_Human implements Serializable{
         this.date = date;
     }
 
-   /**
+    /**
+     * констркутор с добавлением id
+     * @param id
+     * @param name
+     * @param sex
+     * @param date
+     */
+    public Designer_Human(int id, String name, String sex, int date) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.date = date;
+    }
+
+    /**
    Создаем геторы и сетеры
     */
     public String getName() {
@@ -147,5 +167,18 @@ public class Designer_Human implements Serializable{
         return "Имя: " + getName() + " Возраст: " + getDate() + " Пол : " + getSex() + " Мать : " + mother + " " +
                 " Отец : " + father;
     }
+    /**
+     * метод добавления очередной
+     * @param Humman
+     */
+    public void addHumanH (Designer_Human Humman) {
+        humans.add(Humman);
+    }
+
+    @Override
+    public int compareTo(Homework_3.Designer_Human o) {
+        return name.compareTo(o.getName());
+    }
 }
+
 
