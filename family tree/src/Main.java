@@ -28,16 +28,17 @@ public class Main {
 //        serializa(saves);
 
 
+/**
+ * Вариант вызова как в лекции
+ */
+        Serializator serializator = new Serializator() {
+//            @Override
+            public void serializaSave() {
 
+            }
+        };
+        System.out.println(serializator.serializaSave(human1)); //Проверка если true - значит записть прошла
 
-//        Serializator serializator = new Serializator() {
-//////            @Override
-////            public void serializaSave() {
-////
-////            }
-//        };
-//        System.out.println(serializator.serializaSave(human1)); //Проверка если true - значит записть прошла
-//
 //
 //        try {
 //            Designer_Human human11 = serializator.DesSerializa();
